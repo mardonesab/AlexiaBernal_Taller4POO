@@ -27,6 +27,12 @@ public class Coordinador extends Usuario
 	public String toString() {
 		return "Coordinador [area=" + area + "]";
 	}
+
+	@Override
+	public void mostrarMenu() {
+		System.out.println("Menú del Coordinador");
+		
+	}
 	
 	
 	

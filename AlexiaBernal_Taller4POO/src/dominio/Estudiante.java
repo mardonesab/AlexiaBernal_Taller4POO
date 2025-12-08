@@ -41,6 +41,11 @@ public class Estudiante extends Usuario
 	public String toString() {
 		return "Estudiante [rut=" + rut + ", nombreCompleto=" + nombreCompleto + "]";
 	}
+	@Override
+	public void mostrarMenu() {
+		System.out.println("Menú del Estudiante");
+		
+	}
 
 	
 	
