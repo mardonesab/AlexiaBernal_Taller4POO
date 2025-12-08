@@ -1,3 +1,9 @@
+/*
+ * Alexia Antonia Bernal Mardones
+ * 21.505.877-8
+ * Ingeniería Civil en Computación e Informática
+*/
+
 package dominio;
 
 public class Estudiante extends Usuario 
