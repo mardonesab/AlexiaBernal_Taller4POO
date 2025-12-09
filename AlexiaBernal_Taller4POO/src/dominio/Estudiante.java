@@ -13,7 +13,7 @@ public class Estudiante extends Usuario
 	String carrera;
 	int semestre;
 	String correo;
-	public Estudiante(String nombre, String contraseña, String rol, String rut, String nombreCompleto, String carrera,
+	public Estudiante(String nombre, String contraseña, String rut, String nombreCompleto, String carrera,
 			int semestre, String correo) {
 		super(nombre, contraseña, "Estudiante");
 		this.rut = rut;
