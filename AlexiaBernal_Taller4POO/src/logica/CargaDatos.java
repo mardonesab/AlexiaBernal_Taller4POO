@@ -46,17 +46,17 @@ public class CargaDatos
 	{
 		try 
 		{
-			Scanner scanner  = new Scanner(new File("usuarios.txt"));
+			Scanner scanner  = new Scanner(new File("archivos/usuarios.txt"));
 			while (scanner.hasNextLine())
 			{
 				String linea = scanner.nextLine();
 				String[] partes = linea.split(";");
-				if (partes[2].equals("Administrador"))
+				if (partes[2].equals("Admin"))
 				{
 					usuarios.add(new Administrador(partes[0], partes[1]));
 				} else if (partes[2].equals("Coordinador"))
 				{
-					usuarios.add(new Coordinador(partes[2], partes[1], partes[3]));
+					usuarios.add(new Coordinador(partes[0], partes[1], partes[3]));
 				}
 			}			
 			scanner.close();
@@ -70,7 +70,7 @@ public class CargaDatos
 	public void cargarEstudiantes() 
 	{
 		try {
-			Scanner scanner = new Scanner(new File("estudiantes.txt"));
+			Scanner scanner = new Scanner(new File("archivos/estudiantes.txt"));
 			while (scanner.hasNextLine())
 			{
 				String linea = scanner.nextLine();
@@ -93,7 +93,7 @@ public class CargaDatos
 	public void cargarCertificaciones()
 	{
 		try {
-			Scanner scanner = new Scanner(new File("certificaciones.txt"));
+			Scanner scanner = new Scanner(new File("archivos/certificaciones.txt"));
 			while (scanner.hasNextLine())
 			{
 				String linea = scanner.nextLine();
@@ -114,7 +114,7 @@ public class CargaDatos
 	public void cargarRegistros()
 	{
 		try {
-			Scanner scanner = new Scanner(new File("registros.txt"));
+			Scanner scanner = new Scanner(new File("archivos/registros.txt"));
 			while (scanner.hasNextLine())
 			{
 				String linea = scanner.nextLine();
@@ -134,7 +134,7 @@ public class CargaDatos
 	public void cargarNotas()
 	{
 		try {
-			Scanner scanner = new Scanner(new File("notas.txt"));
+			Scanner scanner = new Scanner(new File("archivos/notas.txt"));
 			while (scanner.hasNextLine())
 			{
 				String linea = scanner.nextLine();
@@ -145,6 +145,39 @@ public class CargaDatos
 			}
 			scanner.close();
 				
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void cargarCursos()
+	{
+		try {
+			Scanner scanner = new Scanner(new File("archivos/cursos.txt"));
+			
+			while (scanner.hasNextLine())
+			{
+				String linea = scanner.nextLine();
+				String [] partes = linea.split(";");
+				
+				String nrc = partes[0];
+				String nombre = partes[1];
+				int semestre = Integer.parseInt(partes[2]);
+				int creditos = Integer.parseInt(partes[3]);
+				String area = partes[4];
+				String prerequisito = "";
+				
+				if (partes.length == 6)
+				{
+					prerequisito = partes[5];
+				}
+				
+				Curso curso = new Curso(nrc, nombre, semestre, creditos, area, prerequisito);
+				cursos.add(curso);
+			}
+			scanner.close();
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

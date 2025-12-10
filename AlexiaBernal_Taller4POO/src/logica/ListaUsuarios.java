@@ -14,9 +14,9 @@ public class ListaUsuarios
 {
 	CargaDatos datos = CargaDatos.getInstance();
 	
-	public ArrayList<Estudiante> getListaEstudiantes()
+	public ArrayList<Usuario> getListaUsuarios()
 	{
-		return datos.getEstudiantes();
+		return datos.getUsuarios();
 	}
 	
 	public Usuario buscarUsuario(String nombre, String contraseña)
