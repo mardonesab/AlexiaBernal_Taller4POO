@@ -1,7 +1,13 @@
+/*
+ * Alexia Antonia Bernal Mardones
+ * 21.505.877-8
+ * Ingeniería Civil en Computación e Informática
+*/
 package presentacion;
 
 import javax.swing.JOptionPane;
 
+import dominio.Estudiante;
 import dominio.Usuario;
 import logica.CargaDatos;
 import logica.ListaUsuarios;
@@ -49,7 +55,7 @@ public class App {
 			new MenuCoordinador().setVisible(true);
 		} else
 		{
-			new MenuEstudiante().setVisible(true);
+			new MenuEstudiante((Estudiante) usuario).setVisible(true);
 		}
 
 	}

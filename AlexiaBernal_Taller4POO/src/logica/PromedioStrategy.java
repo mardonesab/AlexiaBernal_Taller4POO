@@ -5,9 +5,11 @@
 */
 package logica;
 
+import java.util.ArrayList;
+
 import dominio.NotaAsignatura;
 
-public interface AvanceVisitor 
+public interface PromedioStrategy 
 {
-	void visit(NotaAsignatura nota);
+	double calcular(ArrayList<NotaAsignatura> notasdeEstudiante);
 }
