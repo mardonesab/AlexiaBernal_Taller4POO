@@ -40,18 +40,21 @@ public class VentanaCrearUsuario extends JFrame
 		
 		panelPrincipal.add(panelBotones, BorderLayout.NORTH);
 		
-		botonCrearEstudiante.addActionListener(e -> mostrarCrearEstudiante());
-		botonCrearCoordinador.addActionListener(e -> mostrarCrearCoordinador());
-		
 		panelContenido = new JPanel();
 		panelContenido.setLayout(new BoxLayout(panelContenido, BoxLayout.PAGE_AXIS));
 		panelPrincipal.add(panelContenido, BorderLayout.CENTER);
+		
+		botonCrearEstudiante.addActionListener(e -> mostrarCrearEstudiante());
+		botonCrearCoordinador.addActionListener(e -> mostrarCrearCoordinador());
 		
 		
 	}
 	
 	void mostrarCrearEstudiante()
 	{
+		panelContenido.removeAll();
+
+		
 		JTextField nombreUsuario = new JTextField();
 		JTextField contraseña = new JTextField();
 		JTextField rut = new JTextField();
@@ -86,13 +89,21 @@ public class VentanaCrearUsuario extends JFrame
 			
 			JOptionPane.showMessageDialog(this, "Estudiante creado exitosamente");
 			
+			panelContenido.removeAll();
+			panelContenido.revalidate();
+			panelContenido.repaint();
+			
 		});
 		
-		
+		panelContenido.revalidate();
+		panelContenido.repaint();
+	
 	}
 	
 	void mostrarCrearCoordinador()
 	{
+		panelContenido.removeAll();
+		
 		JTextField nombreUsuario = new JTextField();
 		JTextField contraseña = new JTextField();
 		JTextField area = new JTextField();
@@ -116,6 +127,9 @@ public class VentanaCrearUsuario extends JFrame
 			JOptionPane.showMessageDialog(this, "Coordinador creado exitosamente");
 			
 		});
+		
+		panelContenido.revalidate();
+		panelContenido.repaint();
 		
 	}
 	

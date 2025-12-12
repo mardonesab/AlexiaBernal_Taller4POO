@@ -34,8 +34,8 @@ public class MenuAdministrador extends JFrame
 			new VentanaCrearUsuario().setVisible(true);
 		});
 		botonModificar.addActionListener(e -> new VentanaModificarUsuario().setVisible(true));
-		botonEliminar.addActionListener(e -> {});
-		botonRestablecer.addActionListener(e -> {});
+		botonEliminar.addActionListener(e -> new VentanaEliminarUsuario().setVisible(true));
+		botonRestablecer.addActionListener(e -> new VentanaRestablecerContraseña().setVisible(true));
 		
 		
 		

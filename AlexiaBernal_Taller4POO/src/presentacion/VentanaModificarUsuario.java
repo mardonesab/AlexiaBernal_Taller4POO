@@ -52,7 +52,7 @@ public class VentanaModificarUsuario extends JFrame
 		
 			JTextField nombreUsuario = new JTextField();
 			
-			panelContenido.add(new JLabel("Ingrese username del usuario que desea modificar:"));
+			panelContenido.add(new JLabel("Ingrese nombre del usuario que desea modificar:"));
 			panelContenido.add(nombreUsuario);
 			
 			JButton botonBuscar = new JButton("Buscar");
@@ -65,7 +65,7 @@ public class VentanaModificarUsuario extends JFrame
 				
 				if (u == null)
 				{
-					JOptionPane.showMessageDialog(this, "No existe un usuario con ese username.");
+					JOptionPane.showMessageDialog(this, "No existe un usuario con ese nombre.");
 					return;
 				}
 				
