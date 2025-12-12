@@ -30,7 +30,9 @@ public class MenuAdministrador extends JFrame
 		
 		add(panelBotones, BorderLayout.NORTH);
 		
-		botonCrear.addActionListener(e -> {});
+		botonCrear.addActionListener(e -> {
+			new VentanaCrearUsuario().setVisible(true);
+		});
 		botonModificar.addActionListener(e -> {});
 		botonEliminar.addActionListener(e -> {});
 		botonRestablecer.addActionListener(e -> {});

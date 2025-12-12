@@ -16,12 +16,12 @@ public class UsuariosFactory
 		return new Administrador(nombre, contraseña);
 	}
 	
-	public Coordinador crearCoordinador(String nombre, String contraseña, String area)
+	public static Coordinador crearCoordinador(String nombre, String contraseña, String area)
 	{
 		return new Coordinador(nombre, contraseña, area);
 	}
 	
-	public Estudiante crearEstudiante(String nombre, String contraseña, String rut, String nombreCompleto, String carrera,
+	public static Estudiante crearEstudiante(String nombre, String contraseña, String rut, String nombreCompleto, String carrera,
 			int semestre, String correo)
 	{
 		return new Estudiante(nombre, contraseña, rut, nombreCompleto, carrera, semestre, correo);

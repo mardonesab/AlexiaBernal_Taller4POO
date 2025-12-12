@@ -184,6 +184,17 @@ public class CargaDatos
 		}
 	}
 
+	public void agregarUsuario(Usuario u)
+	{
+		usuarios.add(u);
+		
+		if (u instanceof Estudiante)
+		{
+			estudiantes.add((Estudiante) u);
+		}
+	}
+	
+
 	public ArrayList<Usuario> getUsuarios() {
 		return usuarios;
 	}
