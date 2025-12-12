@@ -34,12 +34,12 @@ public class MenuCoordinador extends JFrame
 		
 		add(panelBotones, BorderLayout.NORTH);
 		
-		botonModificarCert.addActionListener(e -> {});
-		botonGenerarCert.addActionListener(e -> {});
-		botonEstadisticas.addActionListener(e -> {});
-		botonAsignaturasCriticas.addActionListener(e -> {});
-		botonPerfilesEstudiantes.addActionListener(e -> {});
-		botonAvancesAcademicos.addActionListener(e -> {});
+		botonModificarCert.addActionListener(e -> new VentanaModificarCertificacion().setVisible(true));
+		botonGenerarCert.addActionListener(e -> new VentanaGenerarCertificados().setVisible(true));
+		botonEstadisticas.addActionListener(e -> new VentanaVerEstadisticas().setVisible(true));
+		botonAsignaturasCriticas.addActionListener(e -> new VentanaAsignaturasCriticas().setVisible(true));
+		botonPerfilesEstudiantes.addActionListener(e -> new VentanaPerfilEstudiante().setVisible(true));
+		botonAvancesAcademicos.addActionListener(e -> new VentanaValidarAvances().setVisible(true));
 		
 		
 	}

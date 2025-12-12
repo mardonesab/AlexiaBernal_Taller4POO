@@ -6,6 +6,10 @@
 
 package dominio;
 
+import java.util.ArrayList;
+
+import logica.AvanceVisitor;
+
 public class Estudiante extends Usuario 
 {
 	String rut;
@@ -60,6 +64,17 @@ public class Estudiante extends Usuario
 	}
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+	
+	public void aceptarAvance(AvanceVisitor visitor, ArrayList<NotaAsignatura> notas)
+	{
+		for (NotaAsignatura n : notas)
+		{
+			if (n.getRut().equals(this.getRut()))
+			{
+				visitor.visit(n);
+			}
+		}
 	}
 	
 	

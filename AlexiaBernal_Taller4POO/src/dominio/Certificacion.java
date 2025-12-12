@@ -39,6 +39,24 @@ public class Certificacion
 	public String toString() {
 		return "Certificacion [id=" + id + ", nombre=" + nombre + "]";
 	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public void setCreditosRequeridos(int creditosRequeridos) {
+		this.creditosRequeridos = creditosRequeridos;
+	}
+	public void setAñosValidez(int añosValidez) {
+		this.añosValidez = añosValidez;
+	}
+	
+	
 	
 	
 	
