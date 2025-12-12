@@ -33,6 +33,17 @@ public abstract class Usuario
 	
 	
 	public abstract void mostrarMenu();
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
+	
+	
 	
 	
 }

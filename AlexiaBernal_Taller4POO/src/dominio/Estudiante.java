@@ -46,6 +46,23 @@ public class Estudiante extends Usuario
 		System.out.println("Menú del Estudiante");
 		
 	}
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
+	}
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+	public void setSemestre(int semestre) {
+		this.semestre = semestre;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	
+	
 
 	
 	
